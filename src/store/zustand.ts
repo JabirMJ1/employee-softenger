@@ -9,10 +9,11 @@ export interface EmployeeStore {
     add: (employee: TEmployeeWithoutId) => void,
     edit: (employee: TEmployee) => void,
     remove: (employeeId: string) => void,
+    switchTab: (tab: TABS) => void
 }
 
 export const useEmployeeStore = create<EmployeeStore>((set) => ({
-    activeTab: TABS.ADD,
+    activeTab: TABS.VIEW,
     employees: {},
     add: (employee) => set((state) => {
         const id = Utils.generate_id(15)
@@ -27,9 +28,12 @@ export const useEmployeeStore = create<EmployeeStore>((set) => ({
         
         return { employees }
     }),
-    remove: (employeeId: string) => set(state => {
+    remove: (employeeId) => set(state => {
         const employees = {...state.employees}
         delete employees[employeeId]
         return { employees }
+    }),
+    switchTab: (tab) => set(state => {
+        return { activeTab: tab }
     }),
 }))
