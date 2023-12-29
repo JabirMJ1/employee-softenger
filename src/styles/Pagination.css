@@ -1,0 +1,115 @@
+.pagination {
+  margin: 5px auto 0px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a {
+  color: #fff;
+}
+.pagination > li > a {
+  padding: 7px 12px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 4px;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #253858;
+  border-color: #253858;
+  color: #fff;
+  outline: none;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+/* ----pagination-item-bg-blue----- */
+.pagination.pagination-item-bg-blue > .active > a,
+.pagination.pagination-item-bg-blue > .active > span,
+.pagination.pagination-item-bg-blue > .active > a:hover,
+.pagination.pagination-item-bg-blue > .active > span:hover,
+.pagination.pagination-item-bg-blue > .active > a:focus,
+.pagination.pagination-item-bg-blue > .active > span:focus {
+  background-color: #091CAA;
+  border-color: #091CAA;
+  color: #fff;
+  outline: none;
+  opacity: 1;
+}
+.pagination > li > a:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #DFE1E6;
+  text-decoration: none;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
+}
+
+.pagination-dropdown {
+  display: flex;
+  margin-right: 6px;
+  align-items: center;
+}
+.pagination-dropdown .pagination-show {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #172B4D;
+  margin-right: 15px;
+  font-family: "Noto Sans", sans-serif;
+}
+.pagination-dropdown select {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 6px 0 6px 10px;
+  height: 31px;
+  border: 1px solid #DFE1E6;
+  font-family: "Noto Sans", sans-serif;
+  /* background-image: none; */
+}
+.pagination-dropdown select:focus {
+  border-color: #ced4da;
+  outline: 0;
+  box-shadow: unset;
+}
+.pagination-dropdown select::after {
+  content: '';
+}
+.pagination .previous a {
+  position: relative;
+}
+.pagination .previous a svg path {
+  stroke: rgb(37, 56, 88);
+}
+.pagination .previous.disabled a svg path {
+  stroke: #DFE1E6;
+}
+.pagination .next a {
+  position: relative;
+}
+.pagination .next.disabled a svg path {
+  stroke: #DFE1E6;
+}
+.pagination a {
+  color: #42526E;
+}
+.unmatched-right-pagination .bottom-page .d-flex {
+  justify-content: flex-end;
+}

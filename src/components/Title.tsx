@@ -1,10 +1,15 @@
 type MyProps = {
     title: string,
-    required?: boolean
 }
 
-const Title = ({title, required}: MyProps) => (
-    <div className="text-black text-sm font-normal"><span className="text-red-500 text-lg">{required && '*'}</span>{title}</div>
+/**
+ * Title Component 
+ * 
+ * @param {string} title
+ * @returns {React.Component}
+ */
+const Title = ({title}: MyProps) => (
+    <div className="text-black font-semibold my-2.5 mt-5">{title}</div>
 );
 
 export default Title

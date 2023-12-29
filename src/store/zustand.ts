@@ -3,18 +3,21 @@ import {TEmployee, TEmployeeWithoutId} from '@/types/types'
 import { TABS } from "@/constants"
 import Utils from "@/helpers"
 
+/**
+ * handles all global state management using zustand
+ */
 export interface EmployeeStore {
-    activeTab: number,
-    employees: {[x: string]: TEmployee},
+    employees: {[x: string]: TEmployee}|null, 
     add: (employee: TEmployeeWithoutId) => void,
     edit: (employee: TEmployee) => void,
     remove: (employeeId: string) => void,
-    switchTab: (tab: TABS) => void
+    setEmployees: (employees: {[x: string]: TEmployee}) => void,
+    // activeTab: number,
+    // switchTab: (tab: TABS) => void
 }
 
 export const useEmployeeStore = create<EmployeeStore>((set) => ({
-    activeTab: TABS.VIEW,
-    employees: {},
+    employees: null,
     add: (employee) => set((state) => {
         const id = Utils.generate_id(15)
         const employees = {...state.employees}
@@ -33,7 +36,11 @@ export const useEmployeeStore = create<EmployeeStore>((set) => ({
         delete employees[employeeId]
         return { employees }
     }),
-    switchTab: (tab) => set(state => {
-        return { activeTab: tab }
-    }),
+    setEmployees: (employees) => set(() => {
+        return { employees }
+    })
+    // activeTab: TABS.VIEW,
+    // switchTab: (tab) => set(state => {
+    //     return { activeTab: tab }
+    // }),
 }))
