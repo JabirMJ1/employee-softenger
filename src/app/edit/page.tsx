@@ -53,7 +53,6 @@ export default function EditManage() {
                         className="object-cover"
                         width={50}
                         height={50}
-                        // fill
                         />
                     </div>
                 </div>

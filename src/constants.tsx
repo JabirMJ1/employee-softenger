@@ -27,30 +27,31 @@ export const PLACEHOLDER_IMAGE = "https://cdn1.vectorstock.com/i/thumb-large/50/
 export const ProductTypeComponentTable = ({item}: any) => {
     return (
          <div className={`p-1 rounded px-2 text-xs w-max`}>
-            <div className="relative block w-12 aspect-square rounded-full overflow-hidden">
-                <Image 
-                src={item?.[FIELDS.PROFILE_IMAGE] ?? PLACEHOLDER_IMAGE}
-                alt="Preview" 
-                className="object-cover"
-                width={50}
-                height={50}
-                // fill
-                />
+            <div className="flex items-center gap-3">
+                <div className="relative block w-12 aspect-square rounded-full overflow-hidden">
+                    <Image 
+                    src={item?.[FIELDS.PROFILE_IMAGE] ?? PLACEHOLDER_IMAGE}
+                    alt="Preview" 
+                    className="object-cover"
+                    width={50}
+                    height={50}
+                    // fill
+                    />
+                </div>
+                <span>{item[FIELDS.NAME]}</span>
             </div>
          </div>
     )
  }
 
 export const TABLE_HEADERS: TTableHeader[] = [
-    {name: "Profile Image", sortable: true, column: FIELDS.PROFILE_IMAGE, 
-        options: {
-            callbackComponent: (item: any) =>  <ProductTypeComponentTable item = {item}/>
-        }
-    },
     {
         name: "Name", 
         sortable: true, 
         column: FIELDS.NAME, 
+        options: {
+            callbackComponent: (item: any) =>  <ProductTypeComponentTable item = {item}/>
+        }
     },
     {name: "Age", sortable: true, column: FIELDS.AGE},
     {name: "Salary", sortable: true, column: FIELDS.SALARY},
