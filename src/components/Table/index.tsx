@@ -230,7 +230,7 @@ const Table = <T extends {[x:string]: any}>({
                         className={`border focus:outline-none p-1`}
                         style={{ width: "80px" }}
                         aria-label="Records on page select"
-                        value={options.pagination === "manual" ? (filters?.limit ?? 100) :(pageSize)}
+                        value={options.pagination === "manual" ? (filters?.limit ?? 10) :(pageSize)}
                         onChange={(e) => {
                             updateFilters && updateFilters({ limit: parseInt(e.target.value) ?? undefined })
                             updateLocalFilters({ limit: parseInt(e.target.value) ?? undefined })
@@ -247,7 +247,7 @@ const Table = <T extends {[x:string]: any}>({
                 </div>
                 <Paginator
                     onPageChange={handlePageChange}
-                    recordPerPage={options.pagination === "manual" ? (filters?.limit ?? 100) : (pageSize ?? 10)}
+                    recordPerPage={options.pagination === "manual" ? (filters?.limit ?? 10) : (pageSize ?? 10)}
                     totalRecords={totalRecords ?? 1}
                     presentPage={filters?.page ? filters.page : 1}
                 />

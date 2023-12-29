@@ -36,7 +36,7 @@ export default function EditManage() {
 
   return (
     <main className="min-h-screen max-w-7xl m-auto">
-      <Title title = "View Employees"/>
+      <Title title = "Edit Employees"/>
       
       <div className="grid grid-cols-3 gap-3">
         {

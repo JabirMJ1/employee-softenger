@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react'
 import { useEmployeeStore } from '@/store/zustand'
 import LocalStorageManager from '@/helpers/LocalStorageManager'
+import { INITIAL_TABLE_DATA } from '@/constants'
 
 export default function RootLayout({
   children,
@@ -19,6 +20,9 @@ export default function RootLayout({
 
   useEffect(() => {
     if(employees !== null) return
+    if(!LocalStorageManager.hasEmployees()){
+      LocalStorageManager.setEmployees(INITIAL_TABLE_DATA)
+    }
 
     setEmployees(LocalStorageManager.getEmployees())
   }, [])

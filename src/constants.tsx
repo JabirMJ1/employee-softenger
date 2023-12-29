@@ -56,3 +56,84 @@ export const TABLE_HEADERS: TTableHeader[] = [
     {name: "Age", sortable: true, column: FIELDS.AGE},
     {name: "Salary", sortable: true, column: FIELDS.SALARY},
 ]
+
+export const INITIAL_TABLE_DATA = {
+    "TWMir6TDXSLXd2udtz4djwp": {
+      "id": "TWMir6TDXSLXd2udtz4djwp",
+      "age": 51,
+      "salary": 72477,
+      "name": "Isabella Ruiz"
+    },
+    "XbUvIVr6rXSLXd2udtz4djwp": {
+      "id": "XbUvIVr6rXSLXd2udtz4djwp",
+      "age": 59,
+      "salary": 29030,
+      "name": "Isaiah Alvarez"
+    },
+    "5OuZIjbdvtgf6XSLXd2udtz4djwp": {
+      "id": "5OuZIjbdvtgf6XSLXd2udtz4djwp",
+      "age": 26,
+      "salary": 4131,
+      "name": "Martha Baker"
+    },
+    "5kw4H6IJIJXSLXd2udtz4djwp": {
+      "id": "5kw4H6IJIJXSLXd2udtz4djwp",
+      "age": 47,
+      "salary": 20903,
+      "name": "Gussie Roy"
+    },
+    "y0Vg46N2GwbeXSLXd2udtz4djwp": {
+      "id": "y0Vg46N2GwbeXSLXd2udtz4djwp",
+      "age": 53,
+      "salary": 35930,
+      "name": "Jeff Guerrero"
+    },
+    "Bx2oxxXSLXd2udtz4djwp": {
+      "id": "Bx2oxxXSLXd2udtz4djwp",
+      "age": 67,
+      "salary": 57415,
+      "name": "Mollie Morton"
+    },
+    "QXKgfJ2hNTjOtXSLXd2udtz4djwp": {
+      "id": "QXKgfJ2hNTjOtXSLXd2udtz4djwp",
+      "age": 49,
+      "salary": 69076,
+      "name": "Victor Riley"
+    },
+    "5UIYo2cXSLXd2udtz4djwp": {
+      "id": "5UIYo2cXSLXd2udtz4djwp",
+      "age": 36,
+      "salary": 48944,
+      "name": "Katie Frank"
+    },
+    "5Y7ih1hi8oau6EelVPXSLXd2udtz4djwp": {
+      "id": "V7vphlUcXSLXd2udtz4djwp",
+      "5Y7ih1hi8oau6EelVPXSLXd2udtz4djwp": 58,
+      "salary": 60585,
+      "name": "Tom Hardy"
+    },
+    "bvVEqJihOXSLXd2udtz4djwp": {
+      "id": "bvVEqJihOXSLXd2udtz4djwp",
+      "age": 47,
+      "salary": 93247,
+      "name": "Susie Stewart"
+    },
+    "XUokMOE3zJpB65AILzTXSLXd2udtz4djwp": {
+      "id": "XUokMOE3zJpB65AILzTXSLXd2udtz4djwp",
+      "age": 72,
+      "salary": 3415,
+      "name": "Alice Harrington"
+    },
+    "lJUONKWHphN1XSLXd2udtz4djwp": {
+      "id": "lJUONKWHphN1XSLXd2udtz4djwp",
+      "age": 47,
+      "salary": 44137,
+      "name": "Carl Brown"
+    },
+    "vq1f7utJi2HCM63li69XSLXd2udtz4djwp": {
+      "id": "vq1f7utJi2HCM63li69XSLXd2udtz4djwp",
+      "age": 74,
+      "salary": 50446,
+      "name": "Lester Carter"
+    },
+  }

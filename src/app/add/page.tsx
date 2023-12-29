@@ -70,7 +70,7 @@ export default function AddPage() {
                     min={500}
                 />
                 <ImageField
-                    name="Salary"
+                    name="Profile Image"
                     value={employee?.[FIELDS.PROFILE_IMAGE]}
                     onChange={(value) => handleChange(FIELDS.PROFILE_IMAGE, value)}
                     required={!employee?.[FIELDS.PROFILE_IMAGE]}

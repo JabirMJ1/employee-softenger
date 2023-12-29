@@ -57,7 +57,7 @@ export default function EditPage() {
     return (
         <main className="min-h-screen max-w-7xl m-auto">
             <form className="space-y-3"> 
-                <Title title = "Add Employee"/>
+                <Title title = "Edit Employee"/>
                 <TextField
                     name="Name"
                     value={employee?.[FIELDS.NAME] ?? ""}
@@ -82,7 +82,7 @@ export default function EditPage() {
                     min={500}
                 />
                 <ImageField
-                    name="Salary"
+                    name="Profile Image"
                     value={employee?.[FIELDS.PROFILE_IMAGE]}
                     onChange={(value) => handleChange(FIELDS.PROFILE_IMAGE, value)}
                     required={!employee?.[FIELDS.PROFILE_IMAGE]}
